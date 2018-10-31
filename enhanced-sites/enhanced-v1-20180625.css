@@ -1,0 +1,73 @@
+/*** Defaults ***/
+/* Font-Smoothing */
+html {text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; }
+
+.TPRelatedTerms {width:auto!important;}
+.TPnav:before,.TPnav:after{display:none;}
+.TPnav{transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-webkit-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-moz-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-ms-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-o-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;}
+
+/* print out for clients nicely */
+@media print {  a[href]:after {content: none;}  }
+
+/* Responsive Request Appointment page */
+table.vsfBlock input[type="text"], .vsfBlock textarea, .vsfSubmitBtn input[type="submit"] {border:solid 1px #ccc;width:100%;}
+
+/* move ada to bottom */
+div#ADAhover,.TPadaBtn {bottom: 10px; top: initial !important;}
+@media (max-width: 767px) {
+  /* hide ADA Accessible button */
+  div#ADAhover,.TPadaBtn{display: none!important;}
+}
+
+@media screen and (max-width: 480px){
+  /* more Responsive Request Appointment */
+  table.vsfBlock>tbody>tr>td{display:inline-block;margin-bottom:10px;width:100%;}
+  td[class^="vsfSubmit"] {display: inline-block;width: 100%;}
+  table.vsfBlock input[type="radio"]{margin:.5em;}
+  /* lets email break wherever it needs to */
+  a[href^=mailto]{-ms-word-break: break-all;word-break: break-all;}
+}
+
+/* TPimgRight and Left and center unfloat for small screen */
+@media screen and (max-width: 767px) {
+.TPimgRight,.TPimgLeft,.TPimgCenter{width:100%!important;height:auto!important;float:none;margin:0;}
+}
+
+@media (min-width: 768px){
+  .TPnavTable{width:750px;}
+}
+@media (min-width: 992px){
+  .TPnavTable{width:970px;}
+}
+@media (min-width: 1200px){
+  .TPnavTable{width:1170px;}
+}
+
+
+/** RESPONSIVE NAVIGATION **/
+.TPmb.TPmenuBox,.TPmb.TPmenuBox .TPmb,.TPmbSub{display:inline-block;font-size:18px;line-height:18px;color:#444;text-align:left;}
+.TPmb.TPmenuBox{background-color:#fff;padding:0px;border-radius:0px;width:100%;font-size:0.8em;}
+.TPmb.TPmenuBox ul li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuBox ul li li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuLink{width:auto;}
+.TPmbSub.TPmbSubBtn{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:3px 10px;font-size:10px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:auto;height:auto;position:relative;top:0;left:0;}
+.TPmbSubBtn::after{border-left:.1em solid #000;border-bottom:.1em solid #000;content:'';position:relative;width:1em;height:1em;transform:rotate(-45deg);top:0;display:inline-block;margin-left:0;}
+.TPmb.TPmenuBtn{background-color:#444;position:relative;padding:9px 10px;font-size: 18px;line-height: 1.2;margin-top:0px;margin-right:15px;margin-bottom:0px;background-image:none;border:none;border-radius:0px;height:auto;}
+.TPmb.TPmenuBtn:hover,.TPmb.TPmenuBtn:focus,.TPmb.TPmenuBtn.focus{filter:brightness(130%);border:none;}
+
+/** bootstrap helpers **/
+.TPmargin-zero{margin:0;}
+.TPmargin-left-zero{margin-left: 0;}
+.TPmargin-right-zero{margin-right: 0;}
+.TPpadding-zero{padding:0;}
+.TPpadding-left-zero{padding-left: 0;}
+.TPpadding-right-zero{padding-right: 0;}
+.TPmargin-top{margin-top:30px;}
+.TPmargin-bottom{margin-bottom: 30px;}
+.TPpadding-top{padding-top:30px;}
+.TPpadding-bottom{padding-bottom: 30px;}
+.TPtext-white{color:#fff!important;}
+a.TPtext-white:hover,a.TPtext-white:focus,a.TPtext-white:active{color:inherit;}
+.TPtext-black{color:#000!important;}
+a.TPtext-black:hover,a.TPtext-black:focus,a.TPtext-black:active{color:inherit;}
+.TPbtn-text-wrap{white-space: normal}

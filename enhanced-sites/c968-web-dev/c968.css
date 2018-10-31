@@ -1,0 +1,235 @@
+/** Custom **/
+/** Unfix mobile nav on mobile horizontal display **/
+.TPpagebody{padding-top:138px;}
+@media (max-width: 991px) {
+  .TPpagebody{padding-top: 70px;}
+}
+.TPbw.TPBandCol.TPaniBanner {
+  padding:0px;
+  margin-top: 0px;
+  overflow: hidden;
+  max-height: 300px;
+}
+@media only screen and (orientation: landscape) and (max-height: 480px)  {
+  #FixedNavTop {position: relative!important;}
+  .TPpagebody {padding:0;}
+  .TPbw.TPBandCol.TPaniBanner {margin-top:0px;}
+}
+.TPmargin-top {
+  margin-top: 30px;
+}
+.TPmargin-bottom {
+  margin-bottom: 30px;
+}
+.TPthumbnail {background: transparent;border:transparent;}
+.TPpanel {padding: 0; margin: 0; border: none; box-shadow: none;}
+.TPtext-white{color:#fff!important;}
+.TPbtn a{text-decoration: none;}
+.TPbtn {
+  border-radius: 0px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.TPbtn:hover,.TPbtn:focus,.TPbtn:active{
+  color:#662483;
+  background-color: transparent;
+  border-color: #662483
+ }
+.TPbtn-primary{color:#fff;background-color: #662483;border-color: transparent;}
+.TPbtn-style1,.TPbtn-style2,.TPbtn-style3 {
+}
+.TPbtn-style1,.TPbkg-style1 {
+  background-color: #ed696f;
+}
+.TPbtn-style2,.TPbkg-style2 {
+  background-color: #97dddd;
+}
+.TPbtn-style3,.TPbkg-style3 {
+  background-color: #662483;
+}
+.TPbtn-grad-alt.TPbtn-sm {
+  margin: 0 10px 10px;
+  font-size: 20px;
+}
+.TPtext-color1 {
+  color: #ed696f;
+}
+.TPtext-color2 {
+  color: #96dddd;
+}
+.TPtext-color3 {
+  color: #662483;
+}
+
+
+/*fa icons*/
+.TPbtn:hover .fa,.TPbtn:active .fa,.TPbtn:focus .fa{color:inherit;}
+.fa-healthgrades:before {content: url(https://www.weo1.com/tpn/gen/LGO-healthgrades.svg);}
+.fa-healthgrades {width: 23px;}
+.TProw-socials {color:#fff;}
+.fa-teal {color:#97dddd;}
+
+/** Header **/
+.TPtopBannerBand {
+  background-color: rgba(255,255,255,1);
+}
+.TPaddress-text-top {
+  font-size: 18px;
+  font-weight: 500;
+  color: inherit;
+}
+.TPlogo-header {
+  position: absolute;
+  top: 36px;
+  max-width: 230px;
+}
+.TProw-header .TPbtn-style2 {
+  font-size: inherit;
+  font-family: Montserrat;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+/* nav  */
+.TPmb.TPmenuBtn{display:none; }
+@media screen and (max-width: 991px) {
+  .TPmb.TPmenuBtn {display:block;width:76px;margin-left:auto;}
+  .TPnavBar{display: none !important;}
+}
+.TPwebNav,.TPaniBanner{width: 100%;}
+.TPwebNav{
+  background:#662483;
+  padding:10px 0;
+}
+
+/* mobile nav colors */
+.TPmb.TPmenuBtn{
+  height: auto;
+  background-color: transparent;
+  padding: 2px;
+}
+.TPmb.TPmenuBox{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+/* Art 1 */
+.TPart1Band {
+border-top: 18px solid #662483;
+}
+.TPart1Col {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.TPimg-tooth1 {
+  max-width: 240px;
+  margin:0 auto;
+}
+@media (min-width: 768px) {
+  .TPgraphic-top {
+    margin-top: -180px;
+  }
+}
+
+
+
+/* Art 2 */
+.TPart2Band {
+  border-top: 40px solid #662483;
+  border-bottom: 40px solid #662483;
+  background-color: #96dddd;
+  margin-top: 80px;
+}
+.TPart2Col {
+  position: relative;
+}
+.TPart2-bkg {
+  position: relative;
+  z-index: 0;
+}
+.TPvideo-thumbnail {
+  margin:0px auto 0;
+  width: 50%;
+  border: 5px solid #000;
+  padding:10px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1
+}
+
+
+
+
+/* Art 3 */
+.TPart3Band {
+ background-color: #96dddd;
+}
+@media (min-width: 768px) {
+  .TProw-visit .TPthumbnail,.TProw-care .TPthumbnail {
+    padding:20px;
+  }
+}
+@media (min-width: 992px) {
+  .TProw-visit .TPthumbnail,.TProw-care .TPthumbnail {
+    padding:80px;
+  }
+}
+.TProw-visit .TPcaption,.TProw-care .TPcaption {
+  color:#fff;
+}
+.TPimg-thumbnail {
+  padding: 0;
+  border: 20px solid #96dddd;
+}
+.TProw-visit, .TProw-visit .TPcol-sm-6, .TProw-care, .TProw-care .TPcol-sm-6 {
+  padding: 0;
+}
+
+
+
+
+/* Art 4 */
+.TPart4Band {
+  background: #96dddd;
+  border-top: 30px solid #ed696f;
+}
+.TPart4Col {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.TPbtn-max-400 {
+  max-width: 400px;
+}
+@media (max-width: 767px) {
+  .fa-quote-left,.fa-quote-right {
+    font-size: 1.5em;
+  }
+}
+
+
+
+/* Art 5 - footer */
+.TPart5Col {
+  padding: 0px;
+  width: 100%;
+}
+.TPbtn-xl {
+  padding-top: 120px;
+  padding-right: 80px;
+  text-align: left;
+}
+
+
+/** Copyright **/
+.TPcopyrightbackgroundBand,.TPcopyrightbackgroundBand * {
+  background-color: #662483;
+  color:#fff;
+}

@@ -1,0 +1,30 @@
+[[[H1:Overview||TPh1]]]<p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>[[[C:
+
+*** insert git hub containers below ***]]]
+[[[github-containers]]]
+
+[[[H2:Introduction||TPh2]]]<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>[[[C:*** end paragraph ***]]]
+
+<ul> <li>Rows must be placed within a <code>.TPBandCol </code> (fixed-width) or <code>.TPBandCol-fluid</code> (full-width) for proper alignment and padding.</li> <li>Use rows to create horizontal groups of columns.</li> <li>Content should be placed within columns, and <strong>only</strong> columns may be immediate children of rows.</li> <li>Predefined grid classes like <code>.</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li> <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li> <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li> <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li> <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li> <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li> </ul>
+
+Extra small devices (phones, less than 768px) this is the default size -  .TPcol-xs-12
+
+Small devices (tablets, 768px and up) -  .TPcol-sm-12
+
+Medium devices (desktops, 992px and up) -  .TPcol-md-12
+
+Large devices (large desktops, 1200px and up) -  .TPcol-lg-12
+
+#'s go from 1-12
+.TPcol-xs-1
+.TPcol-xs-2
+.TPcol-xs-3
+.TPcol-xs-4
+.TPcol-xs-5
+.TPcol-xs-6
+.TPcol-xs-7
+.TPcol-xs-8
+.TPcol-xs-9
+.TPcol-xs-10
+.TPcol-xs-11
+.TPcol-xs-12

@@ -1,0 +1,246 @@
+/*** Defaults ***/
+/* Font-Smoothing */
+html {text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; }
+/* remove extra brake after h tags */
+h2+br,h3+br{display: none;}
+.TPRelatedTerms {width:auto;}
+.TPnav:before,.TPnav:after{display:none;}
+.TPnav{transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-webkit-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-moz-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-ms-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-o-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;}
+
+/* print out for clients nicely */
+@media print {  a[href]:after {content: none;}  }
+
+/* Responsive Request Appointment page */
+table.vsfBlock input[type="text"], .vsfBlock textarea, .vsfSubmitBtn input[type="submit"] {border:solid 1px #ccc;width:100%;}
+
+/* move ada to bottom */
+div#ADAhover,.TPadaBtn {bottom: 10px; top: initial !important;}
+
+@media screen and (max-width: 480px){
+  /* hide ADA Accessible button */
+  div#ADAhover,.TPadaBtn{display: none!important;}
+  /* more Responsive Request Appointment */
+  table.vsfBlock>tbody>tr>td{display:inline-block;margin-bottom:10px;width:100%;}
+  td[class^="vsfSubmit"] {display: inline-block;width: 100%;}
+  table.vsfBlock input[type="radio"]{margin:.5em;}
+  /* lets email break wherever it needs to */
+  a[href^=mailto]{-ms-word-break: break-all;word-break: break-all;}
+}
+
+/* TPimgRight and Left and center unfloat for small screen */
+@media screen and (max-width: 767px) {
+.TPimgRight,.TPimgLeft,.TPimgCenter{width:100%!important;height:auto!important;float:none;margin:0;}
+}
+
+@media (min-width: 768px){
+  .TPnavTable{width:750px;}
+}
+@media (min-width: 992px){
+  .TPnavTable{width:970px;}
+}
+@media (min-width: 1200px){
+  .TPnavTable{width:1170px;}
+}
+
+table.TPartBox,table.TPartBox > tbody,table.TPartBox > tbody > tr,table.TPartBox > tbody > tr > td {display: block;}
+
+/** RESPONSIVE NAVIGATION **/
+.TPmb.TPmenuBox,.TPmb.TPmenuBox .TPmb,.TPmbSub{[ff4]display:inline-block;font-size:18px;line-height:18px;color:#444;text-align:left;}
+.TPmb.TPmenuBox{background-color:#fff;padding:0px;border-radius:0px;width:100%;font-size:0.8em;}
+.TPmb.TPmenuBox ul li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuBox ul li li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuLink{width:auto;}
+.TPmbSub.TPmbSubBtn{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:3px 10px;font-size:10px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:auto;height:auto;position:relative;top:0;left:0;}
+.TPmbSubBtn::after{border-left:.1em solid #000;border-bottom:.1em solid #000;content:'';position:relative;width:1em;height:1em;transform:rotate(-45deg);top:0;display:inline-block;margin-left:0;}
+.TPmb.TPmenuBtn{background-color:#444;position:relative;padding:9px 10px;font-size: 18px;line-height: 1.2;margin-top:0px;margin-right:15px;margin-bottom:0px;background-image:none;border:none;border-radius:0px;height:auto;}
+.TPmb.TPmenuBtn:hover,.TPmb.TPmenuBtn:focus,.TPmb.TPmenuBtn.TPfocus{filter:brightness(130%);border:none;}
+
+
+
+
+/** Custom **/
+.TPthumbnail{background:transparent;border:transparent;}
+.TPthumbnail:hover,.TPthumbnail:focus,.TPthumbnail:active{opacity: .7;}
+.TPwell{border-radius:0;border:transparent;background-color:rgba(12,12,12,0.7);color:#fff;padding:39px;}
+.TPwell a{color:#fff;}
+.TPwell .TPbtn:hover,.TPwell .TPbtn:focus,.TPwell .TPbtn:active{color:#ccc;border-color:#ccc;}
+.TPtext-white{color:#fff;}
+.TPbtn a{text-decoration:none;}
+.TPbtn{border-radius:0px;color:#000;font-family:[ff1];}
+.TPbtn:hover,.TPbtn:focus,.TPbtn:active{border-color:transparent;background-color: transparent;opacity: .7;}
+.TPbtn-green{color:#fff;background-color:#63923a;border-color:#63923a;}
+.TPbtn-green-dark{color:#fff;background-color:#134725;border-color:#134725;}
+.TPbtn-grey{color:#fff;background-color:#444;border-color:#444;}
+.TPbtn-green-alt{color:#62923a;border-color:#62923a;}
+.TPbtn-white-alt{color:#fff;border-color:#fff;}
+.TPbtn-text-wrap{white-space: normal}
+
+
+
+
+
+/*fa icons*/
+.fa{font-size:26px;padding:3px;color:inherit;}
+a .fa:hover,a .fa:active,a .fa:focus{opacity:.6;}
+.TPtopBanner .fa-map-marker{color:#63923a;}
+.TPtopBanner .fa-phone{color:#134725;}
+
+
+
+/** Unfix mobile nav on mobile horizontal display **/
+.TPpagebody {
+  padding-top: 76px;
+}
+
+.TPbw.TPBandCol.TPaniBanner {
+  padding: 0px;
+  margin-top: 0px;
+}
+
+@media only screen and (orientation:landscape) and (max-height:480px) {
+  #FixedNavTop {position: relative !important; }
+  .TPpagebody {padding: 0; }
+  .TPbw.TPBandCol.TPaniBanner {margin-top: 0px; }
+}
+
+
+
+/** Header **/
+.TPtopBannerBand {
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+}
+
+.TPlogo-top {
+  max-width: 190px;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .TPlogo-top{width: 20%;}
+}
+
+
+
+
+/* nav  */
+
+.TPwebNavBand {
+  background: #fff;
+  border-top: solid 1px #ccc;
+}
+
+.TPnavBar{
+  /*display: inline-block;*/
+}
+
+/*.TPnavTable>tbody {
+  display: inline-block;
+  float: right;
+}*/
+.TPnavBar>div {
+  float: right;
+  display: inline-block;
+}
+.TPmb.TPmenuBtn {display: none; }
+@media screen and (max-width:768px) {
+  .TPnavBar {display: none !important; }
+  .TPmb.TPmenuBtn {
+      display: block;
+      width: 75px;
+      margin-left: auto;
+  }
+  .TPmb.TPmenuBox {
+    padding-top: 70px;
+  }
+}
+
+.TPaniBanner {padding: 0;}
+.TPaniBanner, .TPart5Col {
+  width: 100%;
+}
+
+
+/* above art 1 */
+.TPpanel-cta {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  box-shadow: 0 0 20px #444;
+}
+@media (min-width: 768px) {
+  .TPpanel-cta{margin-top: -100px;}
+}
+.TPpanel-cta .TPpanel-body {padding-top: 0;}
+
+.TPcta .TPcaption {font-size: 24px; font-weight: bold;}
+.TPcta-1 .TPcaption {color:#134725;}
+.TPcta-2 .TPcaption {color:#63923a;}
+.TPcta-3 .TPcaption {color:#525252;}
+.TPcta img {width: 25%;}
+@media (min-width: 767px) {
+  .TPcta img {width: 50%;}
+}
+
+
+/* Art 1 */
+.TPart1Col {padding-bottom: 60px;}
+
+
+
+/* Art 2 */
+.TPart2Band {background-color: #63923a;}
+
+
+
+/* Art 3 */
+.TPart3Band {
+  background-image: url([[[Client_Dir]]]img/BKG-reviews-c[[[Client:ID]]].jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.TPart3Col {padding: 60px 15px;}
+
+.TPreview-stars{color: #ffab00;}
+.TPleave-review {margin-right: 20px;}
+
+
+
+/* Art 4 */
+.TPart4Band {
+  background-color: #134725;
+}
+.TPxtra-pad {padding: 30px 15px;}
+.TPtext-underline {text-decoration: underline;}
+
+
+
+
+
+/* footer */
+/* Art 5 */
+.TPart5Band {
+  background-image: url([[[Client_Dir]]]img/BKG-footer-c[[[Client:ID]]].jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.TPart5Col {padding: 0;}
+
+.TPwell-footer {margin-top: 175px;}
+.TPlogo-footer {
+  margin-top: -175px;
+  padding-bottom: 30px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.TPcontact-title {color: #ffab00;}
+
+
+@media (max-width: 480px) {
+  .TPtitle,h1,.TPh1{font-size:38px}
+  .TPtopBannerBand .TPbtn {padding: 5px;}
+  .TPcta img {width: 50%;}
+}

@@ -1,0 +1,141 @@
+/*** Defaults ***/
+/* Font-Smoothing */
+html {text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; }
+/* remove extra brake after h tags */
+.TPRelatedTerms {width:auto;}
+.TPnav:before,.TPnav:after{display:none;}
+.TPnav{transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-webkit-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-moz-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-ms-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;-o-transition:.2s .15s all cubic-bezier(.75,0,.5,1),0.0s top linear;}
+
+/* print out for clients nicely */
+@media print {  a[href]:after {content: none;}  }
+
+/* Responsive Request Appointment page */
+table.vsfBlock input[type="text"], .vsfBlock textarea, .vsfSubmitBtn input[type="submit"] {border:solid 1px #ccc;width:100%;}
+
+/* move ada to bottom */
+div#ADAhover,.TPadaBtn {bottom: 10px; top: initial !important;}
+
+@media screen and (max-width: 480px){
+  /* hide ADA Accessible button */
+  div#ADAhover,.TPadaBtn{display: none!important;}
+  /* more Responsive Request Appointment */
+  table.vsfBlock>tbody>tr>td{display:inline-block;margin-bottom:10px;width:100%;}
+  td[class^="vsfSubmit"] {display: inline-block;width: 100%;}
+  table.vsfBlock input[type="radio"]{margin:.5em;}
+  /* lets email break wherever it needs to */
+  a[href^=mailto]{-ms-word-break: break-all;word-break: break-all;}
+}
+
+/* TPimgRight and Left and center unfloat for small screen */
+@media screen and (max-width: 767px) {
+.TPimgRight,.TPimgLeft,.TPimgCenter{width:100%!important;height:auto!important;float:none;margin:0;}
+}
+h2+br,h3+br{display: none;}
+
+@media (min-width: 768px){
+  .TPnavTable{width:750px;}
+}
+@media (min-width: 992px){
+  .TPnavTable{width:970px;}
+}
+@media (min-width: 1200px){
+  .TPnavTable{width:1170px;}
+}
+
+table.TPartBox,table.TPartBox > tbody,table.TPartBox > tbody > tr,table.TPartBox > tbody > tr > td {display: block;}
+
+/** RESPONSIVE NAVIGATION **/
+.TPmb.TPmenuBox,.TPmb.TPmenuBox .TPmb,.TPmbSub{[ff4]display:inline-block;font-size:18px;line-height:18px;color:#444;text-align:left;}
+.TPmb.TPmenuBox{background-color:#fff;padding:0px;border-radius:0px;width:100%;font-size:0.8em;}
+.TPmb.TPmenuBox ul li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuBox ul li li:hover{background:#f1f1f1;border-radius:0px;}
+.TPmb.TPmenuLink{width:auto;}
+.TPmbSub.TPmbSubBtn{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:3px 10px;font-size:10px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:auto;height:auto;position:relative;top:0;left:0;}
+.TPmbSubBtn::after{border-left:.1em solid #000;border-bottom:.1em solid #000;content:'';position:relative;width:1em;height:1em;transform:rotate(-45deg);top:0;display:inline-block;margin-left:0;}
+.TPmb.TPmenuBtn{background-color:#444;position:relative;padding:9px 10px;font-size: 18px;line-height: 1.2;margin-top:0px;margin-right:15px;margin-bottom:0px;background-image:none;border:none;border-radius:0px;height:auto;}
+.TPmb.TPmenuBtn:hover,.TPmb.TPmenuBtn:focus,.TPmb.TPmenuBtn.TPfocus{filter:brightness(130%);border:none;}
+
+/** bootstrap helpers **/
+.TPmargin-zero{margin:0;}
+.TPmargin-left-zero{margin-left: 0;}
+.TPmargin-right-zero{margin-right: 0;}
+.TPpadding-zero{padding:0;}
+.TPpadding-left-zero{padding-left: 0;}
+.TPpadding-right-zero{padding-right: 0;}
+.TPmargin-top{margin-top:30px;}
+.TPmargin-bottom{margin-bottom: 30px;}
+.TPpadding-top{padding-top:30px;}
+.TPpadding-bottom{padding-bottom: 30px;}
+.TPtext-white{color:#fff;}
+.TPtext-black{color:#000;}
+.TPbtn-text-wrap{white-space: normal}
+
+
+
+/*** Custom ***/
+
+/** Unfix mobile nav on mobile horizontal display **/
+.TPpagebody{padding-top:150px;}
+.TPbw.TPBandCol.TPaniBanner {padding:0px;margin-top: -150px;}
+@media only screen and (orientation: landscape) and (max-height: 480px)  {
+  #FixedNavTop {position: relative!important;}
+  .TPpagebody {padding:0;}
+  .TPbw.TPBandCol.TPaniBanner {margin-top:0px;}
+}
+
+.TPthumbnail {background: transparent;border:transparent;}
+.TPthumbnail:hover,.TPthumbnail:focus,.TPthumbnail:active {opacity: .7;}
+.TPbtn a{text-decoration: none;}
+.TPbtn {border-radius: 0px;}
+.TPbtn:hover,.TPbtn:focus,.TPbtn:active{}
+.TPbtn-primary{color:#fff;background-color: #000;border-color: #000;}
+
+/* fa icons */
+.fa{}
+.fa:hover,.fa:active,.fa:focus{}
+.fa-healthgrades:before {content: url(https://www.weo1.com/tpn/gen/LGO-healthgrades.svg);}
+.fa-healthgrades {width: 18px;}
+
+/** Header **/
+/*  banner  */
+.TPtopBannerBand{}
+
+/*  nav  */
+.TPwebNavBand{}
+.TPnavTable{}
+.TPmb.TPmenuBtn{display:none; }
+@media screen and (max-width: 1199px) {
+  .TPmb.TPmenuBtn {display:inline-block;}
+  .TPnavBar{display: none !important;}
+}
+
+/*  mobile nav colors */
+.TPmb.TPmenuBtn{}
+
+/*  anibanner  */
+
+.TPaniBanner{}
+.TPaniBanner>img {}
+
+
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+/* Art 1 */
+
+
+/* Art 2 */
+
+
+
+/* Art 3 */
+
+
+/* Art 4 */
+
+
+/* Art 5 */
+
+
+/* footer */

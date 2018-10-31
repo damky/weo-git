@@ -1,0 +1,31 @@
+
+
+option 1 
+[[[DivStyle:TPjumbotron|[[[DivStyle:TPbandCol-fluid|[[[H1: theText| optional PageName/ID/URL|TPh1]]]<p> theText</p><p>[[[Page: A page title or id| optional link text|TPbtn TPbtn-primary TPbtn-lg| optional list of client IDs to search| optional title text| optional target]]]</p>]]]]]]
+
+option 2
+[[[DivStyle:TPjumbotron|[[[C:
+	*** begin TPbandCol-fluid ***]]][[[DivStyle:TPbandCol-fluid|[[[C:
+		*** begin h1 tag ***]]][[[H1: theText| optional PageName/ID/URL|TPh1]]][[[C:*** end h1 tag ***]]] [[[C:
+		*** begin p tag ***]]]<p> theText</p>[[[C:*** end p tag ***]]][[[C:
+		*** begin p tag ***]]]<p>[[[Page: A page title or id| optional link text|TPbtn TPbtn-primary TPbtn-lg| optional list of client IDs to search| optional title text| optional target]]]</p>[[[C:
+	*** end TPbandCol-fluid ***]]] ]]] [[[C:
+*** end TPjumbotron ***]]]]]]
+
+snippet option 1 - code tab for viewing ease done with comment tags
+[[[DivStyle:TPjumbotron$1|[[[C:
+	*** begin TPbandCol-fluid ***]]][[[DivStyle:TPbandCol-fluid$2|[[[C:
+		*** begin h1 tag ***]]][[[H1:${3:theText}|${4:optional PageName/ID/URL}|TPh1$5]]][[[C:*** end h1 tag ***]]] [[[C:
+		*** begin p tag ***]]]<p>${6:theText}</p>[[[C:*** end p tag ***]]][[[C:
+		*** begin p tag ***]]]<p>[[[Page:${7:A page title or id}|${8:optional link text}|TPbtn TPbtn-primary TPbtn-lg$9|${10:optional list of client IDs to search}|${11:optional title text}|${12:optional target}]]]</p>[[[C:
+	*** end TPbandCol-fluid ***]]] ]]] [[[C:
+*** end TPjumbotron ***]]]]]]
+
+snippet option 2 - minimal code tab for viewing ease
+[[[DivStyle:TPjumbotron$1|[[[DivStyle:TPbandCol-fluid$2|[[[C:***  ***]]]
+[[[H1:${3:theText}|${4:optional PageName/ID/URL}|TPh1$5]]][[[C:*** end h1 tag ***]]]
+<p>${6:theText}</p>[[[C:*** end p tag ***]]]
+<p>[[[Page:${7:A page title or id}|${8:optional link text}|TPbtn TPbtn-primary TPbtn-lg$8|${10:optional list of client IDs to search}|${11:optional title text}|${12:optional target}]]]</p> ]]] ]]]
+
+snippet option 3 - no code tab for viewing ease
+[[[DivStyle:TPjumbotron$1|[[[DivStyle:TPbandCol-fluid$2|[[[H1:${3:theText}|${4:optional PageName/ID/URL}|TPh1$5]]] <p>${6:theText}</p> <p>[[[Page:${7:A page title or id}|${8:optional link text}|TPbtn TPbtn-primary TPbtn-lg$8|${10:optional list of client IDs to search}|${11:optional title text}|${12:optional target}]]]</p> ]]] ]]]

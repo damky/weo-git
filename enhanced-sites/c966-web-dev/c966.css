@@ -1,0 +1,208 @@
+/** Custom **/
+.TPthumbnail {background: transparent;border:transparent;}
+.TPpanel {padding: 0; margin: 0; border: none; box-shadow: none;}
+.TPtext-white{color:#fff;}
+.TPbtn a{text-decoration: none;}
+.TPbtn {border-radius: 0px;}
+.TPbtn:hover,.TPbtn:focus,.TPbtn:active{
+  color:#fff;
+  background-color: transparent;
+  background-image:-webkit-linear-gradient(top left, #94D7D0 0%, #0071a2);
+  background-image:-o-linear-gradient(top left, #94D7D0 0%, #0071a2);
+  background-image:linear-gradient(to bottom right, #94D7D0 0%, #0071a2);
+ }
+.TPbtn-primary{color:#fff;background-color: #000;border-color: #000;}
+.TPtitle-lg {font-size: 46px;}
+.TPtitle.TPsmall {font-size: 24px;}
+.TPbtn-grad-alt {
+  font-size: 24px;
+  color: #0071a2;
+  font-weight: 500;
+  background-color: rgba(255,255,255,.3);
+  border: 5px solid #fff;
+  -moz-border-image: -moz-linear-gradient(top left, #94D7D0 0%, #0071a2);
+  -webkit-border-image: -webkit-linear-gradient(top left, #94D7D0 0%, #0071a2);
+  border-image: linear-gradient(to bottom right, #94D7D0 0%, #0071a2);
+  border-image-slice: 1;
+}
+.TPbtn-grad-alt.TPbtn-sm {
+  margin: 0 10px 10px;
+  font-size: 20px;
+}
+
+/*fa icons*/
+.TPtopBanner .TPbtn-sm .fa{
+  font-size: 23px;
+  padding:3px;
+  color:#0071a2;
+}
+.fa:hover,.fa:active,.fa:focus{color:inherit;}
+.TPbtn:hover .fa,.TPbtn:active .fa,.TPbtn:focus .fa{color:inherit;}
+.fa-healthgrades:before {content: url(https://www.weo1.com/tpn/gen/LGO-healthgrades.svg);}
+.fa-healthgrades {width: 23px;}
+
+/** Header **/
+/** Unfix mobile nav on mobile horizontal display **/
+.TPpagebody{padding-top:150px;}
+.TPaniBannerBand {margin-top: -150px;}
+@media only screen and (orientation: landscape) and (max-height: 480px)  {
+  #FixedNavTop {position: relative!important;}
+  .TPpagebody {padding:0;}
+  .TPart1Band {margin-top:0px;}
+}
+
+/*.TPbw.TPBandCol.TPaniBanner {padding:0px;}*/
+
+.TPmb.TPmenuBtn{display:none; }
+@media screen and (max-width: 1036px) {
+  .TPmb.TPmenuBtn {display:block;width:75px;margin-left:auto;}
+  .TPnavBar{display: none !important;}
+}
+
+.TPtopBannerBand {
+  border-top: solid 15px #13aba0;
+  background-color: rgba(255,255,255,.6)
+}
+.TPtopBanner,.TPwebNav,.TPart5Col{width: 100%;}
+.TPaddress-text-top {
+  font-size: 18px;
+  font-weight: 500;
+  color: inherit;
+}
+.TPphone-top {
+  font-size: 20px;
+  font-weight: 500;
+}
+.TPphone-top-color {color: #0071a2;}
+.TPlogo-top {
+  position: absolute;
+  top: 30px;
+  max-width: 230px;
+}
+@media (max-width: 991px) {
+  .TPlogo-top {
+    top:68px;
+    max-width: 140px;
+  }
+}
+
+/* nav  */
+
+.TPwebNavBand {
+  background:rgba(0,113,162,.9);
+}
+.TPwebNav{
+  padding:10px;
+}
+.TPnavBar>div {
+  float: right;
+  display: inline-block;
+}
+
+/* mobile nav colors */
+.TPmb.TPmenuBtn{
+  height: auto;
+  background-color: transparent;
+  padding: 2px;
+}
+.TPmb.TPmenuBox{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/** anibanner **/
+.TPaniBannerBand {
+  background-image: url([[[Client_Dir]]]img/BKG-top-c[[[Client:ID]]].jpg);
+  background-size: cover;
+  background-position: center right;
+}
+.TPaniBanner {
+  padding-top: 260px;
+  padding-bottom: 40px;
+}
+.TPwell-frosted {
+  padding:40px;
+  background-color: rgba(255,255,255,.7);
+  border:0px solid transparent;
+  border-top: 8px solid #fff;
+  -moz-border-image: -moz-linear-gradient(left, #94D7D0 0%, #0071a2);
+  -webkit-border-image: -webkit-linear-gradient(left, #94D7D0 0%, #0071a2);
+  border-image: linear-gradient(to right, #94D7D0 0%, #0071a2);
+  border-image-slice: 1;
+}
+
+
+/* Art 1 */
+.TPart1Band{padding-top: 40px; padding-bottom: 40px;}
+.TPcta .TPthumbnail img {
+  width: 33.333%;
+  margin-right: auto;
+  margin-left: 0;
+}
+.TPcta .TPthumbnail .TPstyle6 {
+  color:#0071a2;
+}
+.TPcta .TPthumbnail:hover .TPstyle6,.TPcta .TPthumbnail:focus .TPstyle6,.TPcta .TPthumbnail:active .TPstyle6 {
+  color:#13aba0;
+}
+.TPcta .TPthumbnail .TPstyle6 .TPpartial-underline:after {
+  content:'';
+  display: block;
+  width:50px;
+  height: 5px;
+  background-color:#0071a2;
+}
+.TPcta .TPthumbnail:hover .TPstyle6 .TPpartial-underline:after,.TPcta .TPthumbnail:focus .TPstyle6 .TPpartial-underline:after,.TPcta .TPthumbnail:active .TPstyle6 .TPpartial-underline:after {
+  width:130px;
+}
+
+/* Art 2 */
+.TPart2Band {
+  background-color: #94D7D0;
+  background-image: -webkit-linear-gradient(#94D7D0 0%, #fff);
+  background-image: -o-linear-gradient(#94D7D0 0%, #fff);
+  background-image: linear-gradient(#94D7D0 0%, #fff);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.TPtitle-pad {padding-bottom: 40px;}
+.TPdoc-img {
+  border: 4px solid #0071a2;
+  background: transparent;
+}
+.TPart2Band .fa-healthgrades {width: 40px;}
+
+
+/* Art 3 */
+.TPart3Band {
+  background-image:url([[[Client_Dir]]]img/BKG-art4-c[[[Client:ID]]].jpg);
+  background-image: -webkit-linear-gradient(left, #fff 10%, rgba(255,255,255,.0)),url([[[Client_Dir]]]img/BKG-art4-c[[[Client:ID]]].jpg);
+  background-image: -o-linear-gradient(left, #fff 10%, rgba(255,255,255,.0)),url([[[Client_Dir]]]img/BKG-art4-c[[[Client:ID]]].jpg);
+  background-image: linear-gradient(to right, #fff 10%, rgba(255,255,255,.0)),url([[[Client_Dir]]]img/BKG-art4-c[[[Client:ID]]].jpg);
+  background-position: center right;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .TPart3Col {
+    background: rgba(255,255,255,0.8);
+  }
+}
+
+/* Art 5 - footer */
+.TPart5Band {
+  background-image: url([[[Client_Dir]]]img/BKG-footer-c[[[Client:ID]]].jpg);
+  background-position-y: 250px;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .TPart5Col {
+    background: rgba(255,255,255,0.8);
+  }
+}
+.TPart5Col {
+  padding: 0 0 280px;
+}
+.TPtitle-pad-top{padding-top: 60px;}
+.TPsocials-footer a {display: inline-block; margin:20px 10px;}

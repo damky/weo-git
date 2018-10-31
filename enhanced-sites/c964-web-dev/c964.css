@@ -1,0 +1,148 @@
+/** Custom **/
+.TPbtn a{text-decoration: none;}
+.TPbtn {border-radius: 0px;}
+.TPbtn:hover,.TPbtn:focus,.TPbtn:active{}
+.TPbtn-primary{color:#fff;background-color: #0a9984;border-color: #0a9984;}
+.TPtext-green{color:#0a9984;}
+
+
+
+/*fa icons*/
+.TPtopBannerBand .fa{font-size: 26px;padding:3px;color:#0a9984;}
+.TPtopBannerBand .fa:hover,.TPtopBannerBand .fa:active,.TPtopBannerBand .fa:focus{opacity:.7;}
+.fa-healthgrades:before {content: url(https://www.weo1.com/tpn/c/C964/img/LGO-healthgrades-c964.svg);}
+.fa-healthgrades {color: #0a9984;width: 26px;}
+
+/** Header **/
+.TPtopBanner .TPbtn {
+font-size:20px;
+}
+.TPreq-apt-link .TPbtn {
+  line-height: 0.7;
+}
+@media (min-width: 767px) {
+  .TPborder-left{border-left: 1px solid #0a9984;}
+}
+
+/* nav  */
+/** Unfix mobile nav on mobile horizontal display **/
+.TPpagebody{padding-top:150px;}
+.TPbw.TPBandCol.TPaniBanner {padding:0px;margin-top: -150px;}
+@media only screen and (orientation: landscape) and (max-height: 480px)  {
+  #FixedNavTop {position: relative!important;}
+  .TPpagebody {padding:0;}
+  .TPbw.TPBandCol.TPaniBanner {margin-top:0px;}
+}
+
+.TPmb.TPmenuBtn{display:none; }
+@media screen and (max-width: 1199px) {
+  .TPmb.TPmenuBtn {display:inline-block;}
+  .TPnavBar{display: none !important;}
+}
+.TPwebNavBand{background:rgba(78,93,114,.8); }
+.popmenusep {width: 90%; height: 6px; border-top: solid 1px #fff; margin-left: 1px; margin-top: 6px; }
+
+/* mobile nav colors */
+.TPmb.TPmenuBtn{background-color: transparent;color:#fff;}
+
+
+
+.TPtopBannerBand{background-color: rgba(195,206,226,.8);}
+.TPwebNav,.TPaniBanner,.TPart4Col,.TPart5Col{width: 100%;}
+.TPaniBanner {
+  background-image: url([[[Client_Dir]]]img/BKG-top-c[[[Client:ID]]].jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+}
+.TPgreen-transparent {
+  background: rgba(10, 153, 132, .5);
+  padding: 30px;
+  position: absolute;
+  top: 71px;
+  width: 85%;
+  border-radius: 0px 0px 50px 0px;
+}
+.TPgreen-transparent>div{
+  max-width: 300px;
+  margin:0 0 0 auto;
+}
+.TPlogo-header{
+  margin:0 auto;
+}
+
+@media (min-width: 768px) {
+  .TPgreen-transparent{top: 82px;width:60%; }
+}
+@media (min-width: 992px) {
+  .TPgreen-transparent{width:40%; }
+}
+@media (min-width: 1200px) {
+  .TPgreen-transparent{top:117px;width:40%; }
+}
+
+/* Art 1 */
+.TPart1Band{padding: 5% 0;}
+
+/* Art 2 */
+.TPart2Band {background: #0a9984;}
+.TPthumbnail {background: transparent;border:transparent;color:#fff;}
+.TPthumbnail:hover,.TPthumbnail:focus,.TPthumbnail:active {opacity: .7;}
+.TPthumbnail img.TPcta-responsive {width: 40%;}
+.TPthumbnail .TPcaption {text-align: center;}
+.TPlearnmore {max-width: 60px;margin:10px auto 0;}
+.TPart2Band .TPtitle, .TPart2Band .TPsubtitle, .TPart2Band .TParticle {color: #fff;}
+
+/* Art 3 */
+.TPart3Band {background: #c1ccde;}
+/*a.TPlink-inline{color: #525252;text-decoration: underline;}
+a.TPlink-inline:hover,a.TPlink-inline:active,a.TPlink-inline:focus{text-decoration: none;}*/
+
+/* Art 4 */
+/*.TPpanel {padding: 0; margin: 0; border: none; box-shadow: none;}*/
+/*.TPquote {max-width: 60px; display: inline-block; float: left; padding: 0px; margin: 20px 10px 0 0;}*/
+.TPart4Band{
+  background-image: url([[[Client_Dir]]]img/BKG-art4-c[[[Client:ID]]].png);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: right;
+}
+.TPwoman-padding-top{
+  width: 60%;
+  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .TPwoman-padding-top{width:100%;padding-top: 330px;}
+}
+@media (min-width: 992px) {
+  .TPwoman-padding-top{padding-top: 20px;}
+}
+@media (min-width: 1200px) {
+  .TPwoman-padding-top{padding-top: 0px;}
+}
+.TPbkg-grey {
+  background: #c1ccde;
+  padding: 10px;
+}
+
+/* Art 5 / footer */
+.TPcontact-row{
+  background-image: -webkit-linear-gradient(#fff 0%, transparent), url(http://www.weo1.com/tpn/c/C964/img/BKG-footer-c964.jpg);
+  background-image: -o-linear-gradient(#fff 0%, transparent), url(http://www.weo1.com/tpn/c/C964/img/BKG-footer-c964.jpg);
+  background-image: linear-gradient(#fff 0%, transparent), url(http://www.weo1.com/tpn/c/C964/img/BKG-footer-c964.jpg);
+  min-height: 500px;
+  background-size: cover;
+}
+.TPlogo-footer{
+  margin:0 auto;
+  display: block;
+  max-width: 240px;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .TPside-border{
+    border-left: 1px solid #0a9984;
+    border-right: 1px solid #0a9984;
+  }
+}
