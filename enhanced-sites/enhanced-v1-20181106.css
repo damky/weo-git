@@ -512,13 +512,3 @@ a.TPtext-black:hover, a.TPtext-black:focus, a.TPtext-black:active {
 .icon-bar + .icon-bar + .icon-bar {
   width: 15px;
 }
-
-/** Footer / Copyright **/
-.TPRelatedTerms {
-  width: 100% !important;
-}
-
-/*what is this for*/
-.TPSA21Art1Col {
-  width: 100% !important;
-}
