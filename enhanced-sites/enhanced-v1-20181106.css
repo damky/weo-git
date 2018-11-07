@@ -29,17 +29,6 @@ div#ADAhover,.TPadaBtn {bottom: 10px; top: initial !important;}
 .TPimgRight,.TPimgLeft,.TPimgCenter{width:100%!important;height:auto!important;float:none;margin:0;}
 }
 
-@media (min-width: 768px){
-  .TPnavTable{width:750px;}
-}
-@media (min-width: 992px){
-  .TPnavTable{width:970px;}
-}
-@media (min-width: 1200px){
-  .TPnavTable{width:1170px;}
-}
-
-
 /** RESPONSIVE NAVIGATION **/
 .TPmb.TPmenuBox,.TPmb.TPmenuBox .TPmb,.TPmbSub{display:inline-block;font-size:18px;line-height:18px;color:#444;text-align:left;}
 .TPmb.TPmenuBox{background-color:#fff;padding:0px;border-radius:0px;width:100%;font-size:0.8em;}
@@ -67,3 +56,4 @@ a.TPtext-white:hover,a.TPtext-white:focus,a.TPtext-white:active{color:inherit;}
 .TPtext-black{color:#000!important;}
 a.TPtext-black:hover,a.TPtext-black:focus,a.TPtext-black:active{color:inherit;}
 .TPbtn-text-wrap{white-space: normal}
+.TPbtn{white-space: normal}
