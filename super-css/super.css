@@ -1,0 +1,1342 @@
+/*** ..... Skeleton CSS ..... ***/
+/* Font-Smoothing */
+html {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.TPRelatedTerms {
+  width: auto !important;
+}
+
+.TPnav:before, .TPnav:after {
+  display: none;
+}
+
+/* print out for clients nicely */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+
+}
+
+/* Responsive Request Appointment page */
+table.vsfBlock input[type="text"], .vsfBlock textarea, .vsfSubmitBtn input[type="submit"] {
+  border: solid 1px #ccc;
+  width: 100%;
+}
+
+/* move ada to bottom */
+div#ADAhover, .TPadaBtn {
+  bottom: 10px;
+  top: initial !important;
+}
+
+@media screen and (max-width:480px) {
+
+  /* more Responsive Request Appointment */
+  table.vsfBlock>tbody>tr>td {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  td[class^="vsfSubmit"] {
+    display: inline-block;
+    width: 100%;
+  }
+
+  table.vsfBlock input[type="radio"] {
+    margin: .5em;
+  }
+
+  /* lets email break wherever it needs to */
+  a[href^=mailto] {
+    -ms-word-break: break-all;
+    word-break: break-all;
+  }
+
+}
+
+/* TPimgRight and Left and center unfloat for small screen */
+@media screen and (max-width:767px) {
+  .TPimgRight, .TPimgLeft, .TPimgCenter {
+    width: 100% !important;
+    height: auto !important;
+    float: none;
+    margin: 0;
+  }
+
+}
+
+/** ..... bootstrap helpers ..... **/
+.TPmargin-zero {
+  margin: 0;
+}
+
+.TPmargin-left-zero {
+  margin-left: 0;
+}
+
+.TPmargin-right-zero {
+  margin-right: 0;
+}
+
+.TPpadding-zero {
+  padding: 0;
+}
+
+.TPpadding-left-zero {
+  padding-left: 0;
+}
+
+.TPpadding-right-zero {
+  padding-right: 0;
+}
+
+.TPmargin-top {
+  margin-top: 30px;
+}
+
+.TPmargin-bottom {
+  margin-bottom: 30px;
+}
+
+.TPpadding-top {
+  padding-top: 30px;
+}
+
+.TPpadding-bottom {
+  padding-bottom: 30px;
+}
+
+.TPtext-white {
+  color: #fff !important;
+}
+
+a.TPtext-white:hover, a.TPtext-white:focus, a.TPtext-white:active {
+  color: inherit;
+}
+
+.TPtext-black {
+  color: #000 !important;
+}
+
+a.TPtext-black:hover, a.TPtext-black:focus, a.TPtext-black:active {
+  color: inherit;
+}
+
+.TPbtn-text-wrap {
+  white-space: normal
+}
+
+.TPbtn {
+  white-space: normal
+}
+
+
+
+/** ..... Shadys Nav ..... **/
+/* Navbar Stuff - responsive */
+.TPwebNavBand {
+  z-index: 9;
+  box-shadow: none;
+  width: 100%;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.TPnavbar {
+  border: none;
+  margin-bottom: 0px;
+}
+
+.TPnavbar-default {
+  background-color: transparent;
+}
+
+.TPnavBar > .TPnavTable > tbody > tr {
+  display: inline-block;
+}
+
+@media (max-width:1199px) {
+  .TPnavbar-mobile {
+    display: block;
+  }
+
+}
+
+@media (min-width:1199px) {
+  .TPnavbar-mobile {
+    display: none;
+  }
+
+}
+
+@media (min-width:1199px) {
+  .TPnavbar-brand-alt {
+    display: none;
+  }
+
+}
+
+@media (max-width:1198px) {
+  .TPnavbar-header {
+    display: none;
+  }
+
+  .TPnavbar {
+    display: none;
+  }
+
+}
+
+.TPnavbar-brand {
+  padding: 8px !important;
+  display: block;
+  background: transparent;
+  height: auto !important;
+}
+
+.TPnavbar-brand:hover, .TPnavbar-brand:focus {
+  background-color: transparent !important;
+}
+
+.TPnavbar-brand > img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.TPnavbar-right {
+  margin-right: 0px !important;
+}
+
+/* Targets only WEBSITE_NAVIGATION_ULBOOTSTRAP */
+.TPmenuBtn {
+  height: auto;
+  padding: 10px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.TPnavbar > ul[id^="NB"] {
+  float: left;
+  margin: 0;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.TPmbSubBtn::after {
+  border-left: .1em solid #000;
+  border-bottom: .1em solid #000;
+}
+
+.TPnavbar > ul[id^="NB"] > li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.TPnavbar > ul[id^="NB"] > li > a {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.TPnavbar > ul[id^="NB"] > li:hover > ul[id$="sb"] {
+  display: block;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 0px;
+  margin: 0 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -webkit-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -moz-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -ms-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -o-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] > li > a {
+  display: block;
+  padding: 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  white-space: nowrap;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] > li:last-child > a {
+  border-bottom: none;
+}
+
+/** Navigation **/
+.TPnav {
+  transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -webkit-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -moz-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -ms-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -o-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+}
+
+.TPwebNav {
+  width: 100%;
+  max-width: 100%;
+}
+
+/** RESPONSIVE NAVIGATION **/
+.TPmb {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.TPmb1Box {
+  padding: 0px;
+  border-radius: 0px;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.TPmb ul li:hover {
+  border-radius: 0px;
+}
+
+.TPmb ul li li:hover {
+  border-radius: 0px;
+}
+
+.TPmb1Link {
+  width: auto;
+}
+
+.TPmbSubBtn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 3px 10px;
+  font-size: 10px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.TPmbSubBtn::after {
+  content: '';
+  position: relative;
+  width: 1em;
+  height: 1em;
+  transform: rotate(-45deg);
+  top: 0;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.TPmb1Btn {
+  position: relative;
+  padding: 18px 12px;
+  margin-top: 0px;
+  margin-right: 15px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  height: auto;
+}
+
+.TPmb1Btn:hover, .TPmb1Btn:focus, .TPmb1Btn.TPfocus {
+  filter: brightness(130%);
+  border: none;
+}
+
+.icon-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.icon-bar + .icon-bar {
+  width: 22px;
+  margin-top: 4px;
+  background: #fff;
+}
+
+.icon-bar + .icon-bar + .icon-bar {
+  width: 15px;
+}
+
+
+/* ..... FANCY CSS STYLES ..... */
+.TPborder-radius-0 {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0
+}
+
+.TPborder-radius-3 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px
+}
+
+.TPborder-radius-5 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px
+}
+
+.TPborder-radius-8 {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px
+}
+
+.TPborder-radius-10 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px
+}
+
+.TPborder-radius-12 {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px
+}
+
+.TPborder-radius-15 {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px
+}
+
+.TPborder-radius-20 {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px
+}
+
+.TPborder-radius-25 {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px
+}
+
+.TPborder-radius-30 {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px
+}
+
+.TPborder-radius-50 {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px
+}
+
+.TPborder-radius-max {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px
+}
+
+.TPborder-radius-bl-0 {
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.TPborder-radius-br-0 {
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.TPborder-radius-tr-0 {
+  -webkit-border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  border-top-right-radius: 0
+}
+
+.TPborder-radius-tl-0 {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  border-top-left-radius: 0
+}
+
+.TPpadding-0 {
+  padding: 0
+}
+
+.TPpadding-3 {
+  padding: 3px
+}
+
+.TPpadding-5 {
+  padding: 5px
+}
+
+.TPpadding-8 {
+  padding: 8px
+}
+
+.TPpadding-10 {
+  padding: 10px
+}
+
+.TPpadding-12 {
+  padding: 12px
+}
+
+.TPpadding-15 {
+  padding: 15px
+}
+
+.TPpadding-20 {
+  padding: 20px
+}
+
+.TPpadding-25 {
+  padding: 25px
+}
+
+.TPpadding-30 {
+  padding: 30px
+}
+
+.TPpadding-50 {
+  padding: 50px
+}
+
+.TPpadding-tb-0 {
+  padding-top: 0;
+  padding-bottom: 0
+}
+
+.TPpadding-tb-3 {
+  padding-top: 3px;
+  padding-bottom: 3px
+}
+
+.TPpadding-tb-5 {
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+.TPpadding-tb-8 {
+  padding-top: 8px;
+  padding-bottom: 8px
+}
+
+.TPpadding-tb-10 {
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.TPpadding-tb-12 {
+  padding-top: 12px;
+  padding-bottom: 12px
+}
+
+.TPpadding-tb-15 {
+  padding-top: 15px;
+  padding-bottom: 15px
+}
+
+.TPpadding-tb-20 {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+.TPpadding-tb-25 {
+  padding-top: 25px;
+  padding-bottom: 25px
+}
+
+.TPpadding-tb-30 {
+  padding-top: 30px;
+  padding-bottom: 30px
+}
+
+.TPpadding-tb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+
+.TPpadding-lr-0 {
+  padding-left: 0;
+  padding-right: 0
+}
+
+.TPpadding-lr-3 {
+  padding-left: 3px;
+  padding-right: 3px
+}
+
+.TPpadding-lr-5 {
+  padding-left: 5px;
+  padding-right: 5px
+}
+
+.TPpadding-lr-8 {
+  padding-left: 8px;
+  padding-right: 8px
+}
+
+.TPpadding-lr-10 {
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.TPpadding-lr-12 {
+  padding-left: 12px;
+  padding-right: 12px
+}
+
+.TPpadding-lr-15 {
+  padding-left: 15px;
+  padding-right: 15px
+}
+
+.TPpadding-lr-20 {
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+.TPpadding-lr-25 {
+  padding-left: 25px;
+  padding-right: 25px
+}
+
+.TPpadding-lr-30 {
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.TPpadding-lr-50 {
+  padding-left: 50px;
+  padding-right: 50px
+}
+
+.TPmargin-0 {
+  margin: 0
+}
+
+.TPmargin-3 {
+  margin: 3px
+}
+
+.TPmargin-5 {
+  margin: 5px
+}
+
+.TPmargin-8 {
+  margin: 8px
+}
+
+.TPmargin-10 {
+  margin: 10px
+}
+
+.TPmargin-12 {
+  margin: 12px
+}
+
+.TPmargin-15 {
+  margin: 15px
+}
+
+.TPmargin-20 {
+  margin: 20px
+}
+
+.TPmargin-25 {
+  margin: 25px
+}
+
+.TPmargin-30 {
+  margin: 30px
+}
+
+.TPmargin-50 {
+  margin: 50px
+}
+
+.TPmargin-tb-0 {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.TPmargin-tb-3 {
+  margin-top: 3px;
+  margin-bottom: 3px
+}
+
+.TPmargin-tb-5 {
+  margin-top: 5px;
+  margin-bottom: 5px
+}
+
+.TPmargin-tb-8 {
+  margin-top: 8px;
+  margin-bottom: 8px
+}
+
+.TPmargin-tb-10 {
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.TPmargin-tb-12 {
+  margin-top: 12px;
+  margin-bottom: 12px
+}
+
+.TPmargin-tb-15 {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.TPmargin-tb-20 {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+.TPmargin-tb-25 {
+  margin-top: 25px;
+  margin-bottom: 25px
+}
+
+.TPmargin-tb-30 {
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.TPmargin-tb-50 {
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+
+.TPmargin-lr-0 {
+  margin-left: 0;
+  margin-right: 0
+}
+
+.TPmargin-lr-3 {
+  margin-left: 3px;
+  margin-right: 3px
+}
+
+.TPmargin-lr-5 {
+  margin-left: 5px;
+  margin-right: 5px
+}
+
+.TPmargin-lr-8 {
+  margin-left: 8px;
+  margin-right: 8px
+}
+
+.TPmargin-lr-10 {
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+.TPmargin-lr-12 {
+  margin-left: 12px;
+  margin-right: 12px
+}
+
+.TPmargin-lr-15 {
+  margin-left: 15px;
+  margin-right: 15px
+}
+
+.TPmargin-lr-20 {
+  margin-left: 20px;
+  margin-right: 20px
+}
+
+.TPmargin-lr-25 {
+  margin-left: 25px;
+  margin-right: 25px
+}
+
+.TPmargin-lr-30 {
+  margin-left: 30px;
+  margin-right: 30px
+}
+
+.TPmargin-lr-50 {
+  margin-left: 50px;
+  margin-right: 50px
+}
+
+.TPtransition-0ms {
+  transition: all ease-in-out 0s
+}
+
+.TPtransition-125ms {
+  transition: all ease-in-out 125ms
+}
+
+.TPtransition-250ms {
+  transition: all ease-in-out 250ms
+}
+
+.TPtransition-500ms {
+  transition: all ease-in-out .5s
+}
+
+.TPtransition-750ms {
+  transition: all ease-in-out 750ms
+}
+
+.TPtransition-1000ms {
+  transition: all ease-in-out 1s
+}
+
+.TPtransition-1500ms {
+  transition: all ease-in-out 1.5s
+}
+
+.TPopacity-0 {
+  opacity: 0
+}
+
+.TPopacity-10 {
+  opacity: .1
+}
+
+.TPopacity-20 {
+  opacity: .2
+}
+
+.TPopacity-30 {
+  opacity: .3
+}
+
+.TPopacity-40 {
+  opacity: .4
+}
+
+.TPopacity-50 {
+  opacity: .5
+}
+
+.TPopacity-60 {
+  opacity: .6
+}
+
+.TPopacity-70 {
+  opacity: .7
+}
+
+.TPopacity-80 {
+  opacity: .8
+}
+
+.TPopacity-90 {
+  opacity: .9
+}
+
+.TPopacity-100 {
+  opacity: 1
+}
+
+.TPborder-0 {
+  border-width: 0
+}
+
+.TPborder-1 {
+  border-width: 1px
+}
+
+.TPborder-2 {
+  border-width: 2px
+}
+
+.TPborder-3 {
+  border-width: 3px
+}
+
+.TPborder-5 {
+  border-width: 5px
+}
+
+.TPborder-solid {
+  border-style: solid
+}
+
+.TPborder-dashed {
+  border-style: dashed
+}
+
+.TPborder-dotted {
+  border-style: dotted
+}
+
+.TPborder-double {
+  border-style: double
+}
+
+.TPborder-groove {
+  border-style: groove
+}
+
+.TPborder-ridge {
+  border-style: ridge
+}
+
+.TPborder-inset {
+  border-style: inset
+}
+
+.TPborder-outset {
+  border-style: outset
+}
+
+.TPborder-none {
+  border-style: none
+}
+
+/* ..... FANCY BUTTONS ..... */
+.TPbtn, .TPbtn:before, .TPbtn:after, .TPbtn:hover {
+  transition: all .5s
+}
+
+.TPbtn-1 {
+  border-radius: 0;
+  border-width: 2px;
+  transition: all ease-in-out 125ms;
+  color: red;
+  border-color: red
+}
+
+.TPbtn-1:active, .TPbtn-1:focus, .TPbtn-1:hover {
+  background: red;
+  color: white
+}
+
+.TPbtn-2 {
+  color: blue;
+  outline: 0;
+  background: 0 0;
+  border: 1px solid blue;
+  position: relative;
+  overflow: hidden;
+  z-index: 1
+}
+
+.TPbtn-2:after, .TPbtn-2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: blue;
+  z-index: -1;
+}
+
+.TPbtn-2top:after, .TPbtn-2top:before {
+  transform: translate3D(0, -100%, 0)
+}
+
+.TPbtn-2left:after, .TPbtn-2left:before {
+  transform: translate3D(-100%, 0, 0)
+}
+
+.TPbtn-2:before {
+  background: white;
+  z-index: -2;
+  transform: translate3D(0, 0, 0)
+}
+
+.TPbtn-2:hover {
+  color: white
+}
+
+.TPbtn-2:hover:after {
+  transform: translate3D(0, 0, 0);
+  transition: all .5s
+}
+
+.TPbtn-3 {
+  background: limegreen;
+  border-bottom: 5px solid green;
+  color: #fff;
+  transition: all .25s
+}
+
+.TPbtn-3:hover {
+  background: green;
+  border-color: darkgreen
+}
+
+.TPbtn-3:active {
+  border-bottom-width: 0;
+  margin-top: 5px !important
+}
+
+.TPbtn-4 {
+  background: orange;
+  color: #fff
+}
+
+.TPbtn-4:hover {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5)
+}
+
+.TPbtn-5 {
+  background: purple;
+  color: #fff;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: 0
+}
+
+.TPbtn-5:hover {
+  background: #fff;
+  color: purple
+}
+
+.TPbtn-5:after, .TPbtn-5:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: purple;
+  transition: .4s ease all
+}
+
+.TPbtn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0
+}
+
+.TPbtn-5:hover:after, .TPbtn-5:hover:before {
+  width: 100%;
+  transition: .8s ease all
+}
+
+.TPbtn-6 {
+  border: 1px solid grey;
+  position: relative;
+  overflow: hidden
+}
+
+.TPbtn-6:after, .TPbtn-6:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  transition: all .5s .1s cubic-bezier(.55, 0, .1, 1);
+  z-index: -1
+}
+
+.TPbtn-6:before {
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background: #000
+}
+
+.TPbtn-6:after {
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background: grey
+}
+
+.TPbtn-6:hover:before, .TPbtn-6:hoverafter {
+  background: grey;
+  transform: translateX(-50%) scaleY(1.3) scaleX(.8)
+}
+
+.TPbtn-6:hover {
+  color: #fff;
+  border: 1px solid grey
+}
+
+.TPbtn-6:hover:before {
+  top: -35%
+}
+
+.TPbtn-6:hoverafter {
+  top: -45%
+}
+
+.TPbtn-7 {
+  background: magenta;
+  color: #fff
+}
+
+.TPbtn-7:hover {
+  background: darkmagenta;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+
+/* ..... FANCY SOCIAL MEDIA ICONS ..... */
+.TPsm .fa, .TPsm-circle .fa, .TPsm-rounded .fa, .TPsm-square .fa {
+  transition: 150ms all
+}
+
+.TPsm .fa {
+  vertical-align: middle;
+  font-size: 24px;
+  color: #555;
+  width: 45px;
+  height: 45px;
+  padding: 9px 0;
+  margin: 3px 2px;
+  text-align: center
+}
+
+.TPsm:hover .fa {
+  color: #fff
+}
+
+.TPsm-circle .fa {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px
+}
+
+.TPsm-round .fa {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px
+}
+
+.TPsm-outline .fa {
+  border: 2px solid #555
+}
+
+.TPsm-outline:hover .fa {
+  border-color: transparent;
+}
+
+.TPsm-outline:hover .fa, .TPsm-fill .fa {
+  background: #555;
+  color: #fff
+}
+
+.TPsm-fill:hover .fa {
+  background: transparent;
+  color: #555
+}
+
+.TPsm-color .fa-facebook-f, .TPsm-color-hover:hover .fa-facebook-f {
+  color: #3b5998;
+  border-color: #3b5998
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-facebook-f, .TPsm-fill.TPsm-color .fa-facebook-f {
+  background: #3b5998;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-facebook-f {
+  background: transparent;
+  color: #3b5998
+}
+
+.TPsm-color .fa-twitter, .TPsm-color-hover:hover .fa-twitter {
+  color: #1da1f2;
+  border-color: #1da1f2
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-twitter, .TPsm-fill.TPsm-color .fa-twitter {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-twitter {
+  background: transparent;
+  color: #1da1f2
+}
+
+.TPsm-color .fa-google, .TPsm-color-hover:hover .fa-google {
+  color: #4285f4;
+  border-color: #4285f4
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-google, .TPsm-fill.TPsm-color .fa-google {
+  background: #4285f4;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-google {
+  background: transparent;
+  color: #4285f4
+}
+
+.TPsm-color .fa-google-plus, .TPsm-color-hover:hover .fa-google-plus {
+  color: #db4437;
+  border-color: #db4437
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-google-plus, .TPsm-fill.TPsm-color .fa-google-plus {
+  background: #db4437;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-google-plus {
+  background: transparent;
+  color: #db4437
+}
+
+.TPsm-color .fa-yelp, .TPsm-color-hover:hover .fa-yelp {
+  color: #d32323;
+  border-color: #d32323
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-yelp, .TPsm-fill.TPsm-color .fa-yelp {
+  background: #d32323;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-yelp {
+  background: transparent;
+  color: #d32323
+}
+
+.TPsm-color .fa-linkedin, .TPsm-color-hover:hover .fa-linkedin {
+  color: #007bb5;
+  border-color: #007bb5
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-linkedin, .TPsm-fill.TPsm-color .fa-linkedin {
+  background: #007bb5;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-linkedin {
+  background: transparent;
+  color: #007bb5
+}
+
+.TPsm-color .fa-pinterest-p, .TPsm-color-hover:hover .fa-pinterest-p {
+  color: #bd081c;
+  border-color: #bd081c
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-pinterest-p, .TPsm-fill.TPsm-color .fa-pinterest-p {
+  background: #bd081c;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-pinterest-p {
+  background: transparent;
+  color: #bd081c
+}
+
+.TPsm-color .fa-youtube, .TPsm-color-hover:hover .fa-youtube {
+  color: #ff0000;
+  border-color: #ff0000
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-youtube, .TPsm-fill.TPsm-color .fa-youtube {
+  background: #ff0000;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-youtube {
+  background: transparent;
+  color: #ff0000
+}
+
+.TPsm-color .fa-instagram, .TPsm-color-hover:hover .fa-instagram {
+  color: #c32aa3;
+  border-color: #c32aa3
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-instagram, .TPsm-fill.TPsm-color .fa-instagram {
+  background: #c32aa3;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-instagram {
+  background: transparent;
+  color: #c32aa3
+}
+
+.TPsm-color .fa-healthgrades, .TPsm-color-hover:hover .fa-healthgrades {
+  color: #0202ea;
+  border-color: #0202ea
+}
+
+.TPsm-outline.TPsm-color-hover:hover .fa-healthgrades, .TPsm-fill.TPsm-color .fa-healthgrades {
+  background: #0202ea;
+  color: #fff;
+}
+
+.TPsm-fill.TPsm-color:hover .fa-healthgrades {
+  background: transparent;
+  color: #0202ea
+}
