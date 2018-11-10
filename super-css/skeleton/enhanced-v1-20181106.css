@@ -1,0 +1,426 @@
+/*** Defaults ***/
+/* Font-Smoothing */
+html {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.TPRelatedTerms {
+  width: auto !important;
+}
+
+.TPnav:before, .TPnav:after {
+  display: none;
+}
+
+.TPnav {
+  transition: .2s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -webkit-transition: .2s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -moz-transition: .2s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -ms-transition: .2s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -o-transition: .2s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+}
+
+/* print out for clients nicely */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+
+}
+
+/* Responsive Request Appointment page */
+table.vsfBlock input[type="text"], .vsfBlock textarea, .vsfSubmitBtn input[type="submit"] {
+  border: solid 1px #ccc;
+  width: 100%;
+}
+
+/* move ada to bottom */
+div#ADAhover, .TPadaBtn {
+  bottom: 10px;
+  top: initial !important;
+}
+
+@media screen and (max-width:480px) {
+
+  /* more Responsive Request Appointment */
+  table.vsfBlock>tbody>tr>td {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  td[class^="vsfSubmit"] {
+    display: inline-block;
+    width: 100%;
+  }
+
+  table.vsfBlock input[type="radio"] {
+    margin: .5em;
+  }
+
+  /* lets email break wherever it needs to */
+  a[href^=mailto] {
+    -ms-word-break: break-all;
+    word-break: break-all;
+  }
+
+}
+
+/* TPimgRight and Left and center unfloat for small screen */
+@media screen and (max-width:767px) {
+  .TPimgRight, .TPimgLeft, .TPimgCenter {
+    width: 100% !important;
+    height: auto !important;
+    float: none;
+    margin: 0;
+  }
+
+}
+
+/** bootstrap helpers **/
+.TPmargin-zero {
+  margin: 0;
+}
+
+.TPmargin-left-zero {
+  margin-left: 0;
+}
+
+.TPmargin-right-zero {
+  margin-right: 0;
+}
+
+.TPpadding-zero {
+  padding: 0;
+}
+
+.TPpadding-left-zero {
+  padding-left: 0;
+}
+
+.TPpadding-right-zero {
+  padding-right: 0;
+}
+
+.TPmargin-top {
+  margin-top: 30px;
+}
+
+.TPmargin-bottom {
+  margin-bottom: 30px;
+}
+
+.TPpadding-top {
+  padding-top: 30px;
+}
+
+.TPpadding-bottom {
+  padding-bottom: 30px;
+}
+
+.TPtext-white {
+  color: #fff !important;
+}
+
+a.TPtext-white:hover, a.TPtext-white:focus, a.TPtext-white:active {
+  color: inherit;
+}
+
+.TPtext-black {
+  color: #000 !important;
+}
+
+a.TPtext-black:hover, a.TPtext-black:focus, a.TPtext-black:active {
+  color: inherit;
+}
+
+.TPbtn-text-wrap {
+  white-space: normal
+}
+
+.TPbtn {
+  white-space: normal
+}
+
+
+
+/*Shadys Nav*/
+/** Navbar Stuff - responsive **/
+.TPwebNavBand {
+  z-index: 9;
+  box-shadow: none;
+  width: 100%;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.TPnavbar {
+  border: none;
+  margin-bottom: 0px;
+}
+
+.TPnavbar-default {
+  background-color: transparent;
+}
+
+.TPnavBar > .TPnavTable > tbody > tr {
+  display: inline-block;
+}
+
+@media (max-width:1199px) {
+  .TPnavbar-mobile {
+    display: block;
+  }
+
+}
+
+@media (min-width:1199px) {
+  .TPnavbar-mobile {
+    display: none;
+  }
+
+}
+
+@media (min-width:1199px) {
+  .TPnavbar-brand-alt {
+    display: none;
+  }
+
+}
+
+@media (max-width:1198px) {
+  .TPnavbar-header {
+    display: none;
+  }
+
+  .TPnavbar {
+    display: none;
+  }
+
+}
+
+.TPnavbar-brand {
+  padding: 8px !important;
+  display: block;
+  background: transparent;
+  height: auto !important;
+}
+
+.TPnavbar-brand:hover, .TPnavbar-brand:focus {
+  background-color: transparent !important;
+}
+
+.TPnavbar-brand > img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.TPnavbar-right {
+  margin-right: 0px !important;
+}
+
+/** Targets only WEBSITE_NAVIGATION_ULBOOTSTRAP **/
+.TPmenuBtn {
+  height: auto;
+  padding: 10px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.TPnavbar > ul[id^="NB"] {
+  float: left;
+  margin: 0;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.TPmbSubBtn::after {
+  border-left: .1em solid #000;
+  border-bottom: .1em solid #000;
+}
+
+.TPnavbar > ul[id^="NB"] > li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.TPnavbar > ul[id^="NB"] > li > a {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.TPnavbar > ul[id^="NB"] > li:hover > ul[id$="sb"] {
+  display: block;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 0px;
+  margin: 0 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -webkit-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -moz-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -ms-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -o-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] > li > a {
+  display: block;
+  padding: 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  white-space: nowrap;
+}
+
+.TPnavbar > ul[id^="NB"] > li > ul[id$="sb"] > li:last-child > a {
+  border-bottom: none;
+}
+
+/** Navigation **/
+.TPnav:before, .TPnav:after {
+  display: none;
+}
+
+.TPnav {
+  transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -webkit-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -moz-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -ms-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+  -o-transition: .5s .15s all cubic-bezier(.75, 0, .5, 1), 0.0s top linear;
+}
+
+.TPwebNav {
+  width: 100%;
+  max-width: 100%;
+}
+
+/** RESPONSIVE NAVIGATION **/
+.TPmb {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.TPmb1Box {
+  padding: 0px;
+  border-radius: 0px;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.TPmb ul li:hover {
+  border-radius: 0px;
+}
+
+.TPmb ul li li:hover {
+  border-radius: 0px;
+}
+
+.TPmb1Link {
+  width: auto;
+}
+
+.TPmbSubBtn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 3px 10px;
+  font-size: 10px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.TPmbSubBtn::after {
+  content: '';
+  position: relative;
+  width: 1em;
+  height: 1em;
+  transform: rotate(-45deg);
+  top: 0;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.TPmb1Btn {
+  position: relative;
+  padding: 18px 12px;
+  margin-top: 0px;
+  margin-right: 15px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  height: auto;
+}
+
+.TPmb1Btn:hover, .TPmb1Btn:focus, .TPmb1Btn.TPfocus {
+  filter: brightness(130%);
+  border: none;
+}
+
+.icon-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.icon-bar + .icon-bar {
+  width: 22px;
+  margin-top: 4px;
+  background: #fff;
+}
+
+.icon-bar + .icon-bar + .icon-bar {
+  width: 15px;
+}
