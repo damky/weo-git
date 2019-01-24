@@ -80,6 +80,11 @@ div#ADAhover, .TPadaBtn {
   }
 }
 
+/* mobile nav width fix */
+#MenuDiv1, [id^=TPsbm] {
+  width: auto!important;
+}
+
 /** ..... bootstrap helpers ..... **/
 .TPmargin-0 {
   margin: 0;
