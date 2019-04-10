@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>map</title>
+  <style type="text/css">
+    #map {
+      height: 400px;
+      width:100%;
+    }
+  </style>
+</head>
+<body>
+<div id="map" data-mapstyler="#A3E0BA, #ffffff, #6E4FC4, #6E4FC4, #3BAEB0" data-mapzoom="14"></div>
+
+<div id="mapLocation1" data-mapaddress="970 SW 173rd Beaverton, OR" data-mapmarker="" data-lat='45.485168' data-lng='-122.804489' data-infocontent="[[[CLIENTEX:PRACTICENAME]]]<br>[[[func:location-data|location-address-3]]]" ></div>
+
+<div id="mapLocation2" data-mapaddress="1130 East Sonterra Boulevard #110, San Antonio, TX" data-latlng='{"lat":29.4241, "lng":-98.4936}' data-mapmarker="" data-infocontent="[[[CLIENTEX:PRACTICENAME]]]<br>[[[func:location-data|location-address-2]]]"></div>
+
+<div id="mapLocation3" data-latlng='{"lat":43.491650, "lng":-112.033966}' data-mapaddress="2470 Mars st. Idaho falls, ID, 83402" data-mapmarker="//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png" data-infocontent="[[[CLIENTEX:PRACTICENAME]]]<br>[[[func:location-data|location-address-1]]]"></div>
+
+<div id="mapLocation4" data-lat="44.939157" data-lng="-123.033121"></div>
+
+<div id="mapLocation5" data-lat="44.058090" data-lng="-121.315147"></div>
+
+<div id="mapLocation6" data-lat="45.705310" data-lng="-121.521793" data-infocontent="here is some text for hood river"></div>
+
+<div id="mapLocation7" data-lat="45.993246" data-lng="-123.920213" data-infocontent="Here is some text for seaside"></div>
+
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXX6Yu49LyL7wdRDIFbwo-XBLUJWugG9k&callback=initMap">
+
+
+</script>
+
+
+
+<script type="text/javascript">
+// get all locations and make array from datasets
+var locations = document.querySelectorAll('[id^="mapLocation"]');
+
+console.log(locations);
+
+// fix this. change latLng into floats
+var locCoords = [];
+var mapMarker = [];
+var infoContent = [];
+var mapAddress = [];
+var markers = []
+var center;
+
+for (var i = 0; i < locations.length; i++) {
+  // locCoords.push(JSON.parse(locations[i].dataset.latlng));
+  markers.push({})
+
+  if (locations[i].dataset.latlng) {
+    markers[i].coords = JSON.parse(locations[i].dataset.latlng);
+  }
+  if (locations[i].dataset.mapmarker) {
+    markers[i].iconImage = locations[i].dataset.mapmarker;
+  }
+  if (locations[i].dataset.infocontent) {
+    markers[i].content = locations[i].dataset.infocontent;
+  }
+  if (locations[i].dataset.mapaddress) {
+    markers[i].address = locations[i].dataset.mapaddress;
+  }
+  if (locations[i].dataset.lat && locations[i].dataset.lng) {
+    markers[i].coords = JSON.parse('{"lat":' + locations[i].dataset.lat + ', "lng":' + locations[i].dataset.lng + '}');
+  }
+  if (locations[i].dataset.mapstyler) {
+    markers[i].styler = locations[i].dataset.mapstyler.split(',');
+  }
+  if (locations[i].dataset.mapzoom) {
+    markers[i].zoom = locations[i].dataset.mapzoom;
+  }
+}
+
+
+
+
+console.log(markers);
+
+var options = {
+  zoom: markers[0].zoom,
+  center: markers[0].coords,
+  styles: [{
+      elementType: 'geometry',
+      stylers: [{
+        color: markers[0].styler[1]
+      }]
+    },
+    {
+      elementType: 'labels.text.stroke',
+      stylers: [{
+        color: markers[0].styler[2]
+      }]
+    },
+    {
+      elementType: 'labels.text.fill',
+      stylers: [{
+        color: markers[0].styler[3]
+      }]
+    },    
+    {
+      featureType: 'road',
+      elementType: 'geometry',
+      stylers: [{
+        color: markers[0].styler[4]
+      }]
+    },
+    {
+      featureType: 'water',
+      elementType: 'geometry',
+      stylers: [{
+        color: markers[0].styler[5]
+      }]
+    },
+  ]
+
+};
+
+
+function initMap() {
+
+  var map = new google.maps.Map(document.getElementById('map'), options);
+
+  // Add all markers
+  for (j = 0; j < markers.length; j++) {
+    window.setTimeout(addMarker(markers[j]), j * 400);
+  }
+
+
+  function addMarker(props) {
+    if (props.coords) {
+
+     var marker = new google.maps.Marker({
+        position: props.coords,
+        map: map,
+        animation: google.maps.Animation.DROP
+      });
+    } else {
+      console.log(markers[j].address);
+      var geocoder = new google.maps.Geocoder();
+      geocodeAddress(geocoder, map);
+    }
+
+
+    // check for custom icon
+    if (props.iconImage) {
+      // set icon image
+      marker.setIcon(props.iconImage);
+    }
+
+    //check content
+    if (props.content) {
+      var infoWindow = new google.maps.InfoWindow({
+        content: props.content
+      });
+
+      marker.addListener('click', function() {
+        infoWindow.open(map, marker);
+      });
+
+    }
+  }
+
+
+  // convert addresses into lat long
+  function geocodeAddress(geocoder, resultsMap) {
+    var latlngAddress = markers[j].address;
+    geocoder.geocode({
+      'address': latlngAddress
+    }, function(results, status) {
+      if (status === 'OK') {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+
+    });
+  }
+
+
+
+
+}
+
+</script>
+</body>
+</html>
