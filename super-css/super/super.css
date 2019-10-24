@@ -73,9 +73,6 @@ div#ADAhover, .TPadaBtn {
     float: none;
     margin: 0 0 15px !important;
   }
-  .TPimg-responsive {
-    width:100%;
-  }
   .TPvideo-right,.TPvideo-left {
     max-width:100% !important;
     margin:0 !important;
@@ -159,8 +156,6 @@ a.TPtext-black:hover, a.TPtext-black:focus, a.TPtext-black:active {
 /* Navbar Stuff - responsive */
 .TPwebNavBand {
   z-index: 9;
-  box-shadow: none;
-  width: 100%;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
@@ -203,25 +198,9 @@ a.TPtext-black:hover, a.TPtext-black:focus, a.TPtext-black:active {
   }
 }
 
-
-.TPnavbar-brand {
-  padding: 8px !important;
-  display: block;
-  background: transparent;
-  height: auto !important;
-}
-
-.TPnavbar-brand:hover, .TPnavbar-brand:focus {
-  background-color: transparent !important;
-}
-
 .TPnavbar-brand > img {
   max-width: 100%;
   width: 100%;
-}
-
-.TPnavbar-right {
-  margin-right: 0px !important;
 }
 
 /* Targets only WEBSITE_NAVIGATION_ULBOOTSTRAP */
